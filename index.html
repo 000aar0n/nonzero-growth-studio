@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#141612" />
+    <meta name="description" content="NONZERO is an independent growth studio helping ambitious businesses turn attention into measurable opportunities through search, creative, and conversion." />
+    <meta property="og:title" content="NONZERO — Better attention. Better business." />
+    <meta property="og:description" content="An independent growth studio. Built for businesses ready to get noticed and turn that attention into action." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>NONZERO — Growth worth noticing.</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Netlify parses HTML, not client-side React. This hidden matching form registers the fields at deploy time. -->
+    <form name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
+      <input type="hidden" name="form-name" value="project-inquiry" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="email" />
+      <input name="website" />
+      <input name="service" />
+      <textarea name="message"></textarea>
+    </form>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
