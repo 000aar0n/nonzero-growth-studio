@@ -1,0 +1,47 @@
+{
+  "runtime": "v24.19.0",
+  "npm": "11.9.0",
+  "package": "0.3.2",
+  "installToValidMinutes": 0.071267094,
+  "timingScope": "Timed cached-install rerun; earlier research and initial install excluded",
+  "descriptionDigest": "sha-256:3a374c3681104e78dc516ea6b122ede94ba98b89facbb1fefbb8d6a611c423f2",
+  "contentDigest": "sha-256:cf67dce2976368838e2a416a5fcb416210b05d443c407e197fad6367d944e879",
+  "checks": [
+    "valid fixture accepted",
+    "restricted destination without audience rejected",
+    "expiry before issue rejected",
+    "CLI and API digest match"
+  ],
+  "runs": [
+    {
+      "command": "npm install --ignore-scripts --no-audit --no-fund mailschema@0.3.2",
+      "status": 0,
+      "stdout": "\nup to date in 875ms\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+    },
+    {
+      "command": "npx --offline mailschema@0.3.2 description description.json --contract contract.json",
+      "status": 0,
+      "stdout": "Valid MAP 0.3 description urn:offline-csv-tools:interaction:qa-note-20261020-01\nsha-256:3a374c3681104e78dc516ea6b122ede94ba98b89facbb1fefbb8d6a611c423f2\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+    },
+    {
+      "command": "npx --offline mailschema@0.3.2 description broken-description.json --contract contract.json",
+      "status": 1,
+      "stdout": "",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n/details/destinations/0: must have required property 'audience'\n/details/destinations/0: must match \"then\" schema\n"
+    },
+    {
+      "command": "npx --offline mailschema@0.3.2 description broken-core-description.json --contract contract.json",
+      "status": 1,
+      "stdout": "",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n/expiresAt: must be later than issuedAt\n"
+    },
+    {
+      "command": "npm --version",
+      "status": 0,
+      "stdout": "11.9.0\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+    }
+  ]
+}

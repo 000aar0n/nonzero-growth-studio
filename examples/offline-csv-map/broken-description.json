@@ -1,0 +1,59 @@
+{
+  "@context": "https://mailschema.org/contexts/map-0.3.jsonld",
+  "@type": "MailAction",
+  "profile": "https://mailschema.org/profiles/map/0.3",
+  "type": {
+    "id": "https://mailschema.org/types/publication-approval",
+    "version": "0.1",
+    "contractDigest": "sha-256:de91a49de4cba91209be253456e7c56709791fff877a060560d4eada0cc9468c"
+  },
+  "@id": "urn:offline-csv-tools:interaction:qa-note-20261020-01",
+  "issuedAt": "2026-10-20T12:00:00Z",
+  "expiresAt": "2026-10-20T21:00:00Z",
+  "inLanguage": "en",
+  "service": {
+    "id": "https://offline-csv-tools.example.test",
+    "tenant": "urn:offline-csv-tools:workspace:quality"
+  },
+  "recipient": "reviewer@example.invalid",
+  "subject": {
+    "id": "urn:offline-csv-tools:content:qa-note-20261020",
+    "title": "Review the offline CSV audit note"
+  },
+  "terms": {
+    "id": "urn:offline-csv-tools:proposal:qa-note-20261020-01",
+    "version": "sha-256:dd257c605eef07e4b3f5827f6a38924ddbf6e2275922739390a43da11569305b"
+  },
+  "human": {
+    "url": "https://offline-csv-tools.example.test/reviews/qa-note-20261020/decision"
+  },
+  "details": {
+    "summary": "Review a local audit note before making it available to the fixed fixture reviewer.",
+    "requester": "Offline CSV tools quality review",
+    "content": {
+      "id": "urn:offline-csv-tools:content:qa-note-20261020",
+      "revision": "audit-note-01",
+      "digest": "sha-256:cf67dce2976368838e2a416a5fcb416210b05d443c407e197fad6367d944e879",
+      "title": "Offline CSV tools: reviewed behavior"
+    },
+    "destinations": [
+      {
+        "id": "https://offline-csv-tools.example.test/reviews/qa-note-20261020",
+        "account": "urn:offline-csv-tools:workspace:quality",
+        "visibility": "restricted"
+      }
+    ],
+    "schedule": {
+      "mode": "scheduled",
+      "at": "2026-10-20T20:00:00Z"
+    }
+  },
+  "operations": [
+    {
+      "id": "approve"
+    },
+    {
+      "id": "decline"
+    }
+  ]
+}

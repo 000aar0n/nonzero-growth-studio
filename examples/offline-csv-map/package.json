@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mailschema": "^0.3.2"
+  }
+}

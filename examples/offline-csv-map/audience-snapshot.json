@@ -1,0 +1,7 @@
+{
+  "id": "urn:offline-csv-tools:reviewers",
+  "revision": "reviewers-20261020-01",
+  "members": [
+    "reviewer@example.invalid"
+  ]
+}
